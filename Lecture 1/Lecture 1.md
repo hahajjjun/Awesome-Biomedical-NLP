@@ -20,21 +20,21 @@
 - **WordNet : 고전적인 NLP 해결책**
     - 동의어와 상의어 등의 list를 포함하고 있는 thesaurus(사전)
     
-    <aside>
-    💡 ***WordNet-like resources*의 취약점**
-    
-    - 문맥에 따라 다름 : missing nuance
-    - 새로운 의미 등장(신조어)
-    - 주관적인 분류 기준, requires human labor
-    - word similarity의 정량적 개념 부재
-    </aside>
+<aside>
+💡 WordNet-like resources의 취약점
+
+- 문맥에 따라 다름 : missing nuance
+- 새로운 의미 등장(신조어)
+- 주관적인 분류 기준, requires human labor
+- word similarity의 정량적 개념 부재
+</aside>
     
 - **단어를 원핫 벡터로 변환하기**
     - all non-identical word vectors are orthogonal
     - vector dimension = vocabulary에 속한 모든 단어의 개수
     - **취약점**
         - word similarity의 정량적 개념 부재
-- **분배 가설(**distributional semantics, hypothesis)
+- **분배 가설(distributional semantics, hypothesis)**
     - 단어의 의미는 인접하게 위치한 다른 단어들에 의해 결정된다.
     - 문맥(context) := 근처에 등장하는 words의 집합
     - ***context of w builds a representation of w***
@@ -48,17 +48,17 @@
 ### Word2vec (Mikolov et al. 2013)
 
 <aside>
-💡 ***Word2vec의 아이디어***
+💡 Word2vec의 아이디어
 
 - large corpus of text가 주어짐(typically large but rare words are truncated...)
 - 고정된 vocabulary 내의 모든 단어는 vector로 표현 가능
 - 텍스트의 position **t**를 순회할 때 중심 단어(center) **c**와 문맥 단어(outside) **o**를 정의
-- **similarity of word vectors for c, o → $P(c|o), P(o|c)$ 계산에 활용**
+- **similarity of word vectors for c, o → P(c|o), P(o|c) 계산에 활용**
 - 위의 Probability를 maximize하는 c, o word vector adjustment
 </aside>
 
 <aside>
-💡 ***How Word2Vec Works***
+💡 How Word2Vec Works
 
 - Maximize likelihood, -log(L) = J
 - Gradient Descent with Loss function
