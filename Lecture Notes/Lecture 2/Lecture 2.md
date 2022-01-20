@@ -85,7 +85,7 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
             - less robust model & sparsity issue
             - **SVD 통한 차원 축소**
                 
-                ![PNG 이미지.png](Lecture%202%20b4c53a8069914dcd887f9548fbe23868/PNG_%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5%201.png)
+                ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%201.png)
                 
     - Co-occurence matrix X를 구성할 때 사용한 Hacks
         - Raw count에 대해서 SVD를 수행하면 사실 성능이 좋지 않음
@@ -114,15 +114,15 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 - ***Encoding meaning components in vector differences [Pennington et al, EMNLP 2014]***
     - Co-occurence probability의 비율이 의미적 유사성을 인코딩할 것이라고 추론함
         
-        ![PNG 이미지.png](Lecture%202%20b4c53a8069914dcd887f9548fbe23868/PNG_%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5%202.png)
+        ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%202.png)
         
     - Counting 통해서 embedding vector 게산하거나 유추 가능
         
-        ![PNG 이미지.png](Lecture%202%20b4c53a8069914dcd887f9548fbe23868/PNG_%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5%203.png)
+        ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%203.png)
         
 - ***GloVe [Pennington et al, EMNLP 2014]***
     
-    ![PNG 이미지.png](Lecture%202%20b4c53a8069914dcd887f9548fbe23868/PNG_%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5%204.png)
+    ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%204.png)
     
     - Fast Training / Scalability가 장점
     - 작은 규모의 Corpus에서도 좋은 성능을 보임
