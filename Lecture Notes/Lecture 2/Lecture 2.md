@@ -61,7 +61,7 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
         - Naive Softmax 개선 ⇒ Loss function에 logistic term 추가
         - **아이디어 : 좋은 모델이라면 true pair(c,o)와 random noise(c,o)를 구분할 수 있어야 한다!**
             
-            ![PNG 이미지.png](Lecture%202%20b4c53a8069914dcd887f9548fbe23868/PNG_%E1%84%8B%E1%85%B5%E1%84%86%E1%85%B5%E1%84%8C%E1%85%B5.png)
+            ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80.png)
             
 
 ---
