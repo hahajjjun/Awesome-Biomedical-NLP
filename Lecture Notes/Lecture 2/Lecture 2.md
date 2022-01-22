@@ -62,10 +62,8 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
         - Naive Softmax 개선 ⇒ Loss function에 logistic term 추가
         - **아이디어 : 좋은 모델이라면 true pair(c,o)와 random noise(c,o)를 구분할 수 있어야 한다!**
             
-            ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80.png)
+            <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80.png" width = "500dp"/>
             
-
----
 
 ---
 
@@ -86,7 +84,7 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
             - less robust model & sparsity issue
             - **SVD 통한 차원 축소**
                 
-                ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%201.png)
+                <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%201.png" width = "400dp"/>
                 
     - Co-occurence matrix X를 구성할 때 사용한 Hacks
         - Raw count에 대해서 SVD를 수행하면 사실 성능이 좋지 않음
@@ -115,16 +113,14 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 - ***Encoding meaning components in vector differences [Pennington et al, EMNLP 2014]***
     - Co-occurence probability의 비율이 의미적 유사성을 인코딩할 것이라고 추론함
         
-        ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%202.png)
+        <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%202.png" width = "500dp"/>
         
     - Counting 통해서 embedding vector 게산하거나 유추 가능
         
-        ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%203.png)
+        <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%203.png" width = "400dp"/>
         
 - ***GloVe [Pennington et al, EMNLP 2014]***
-    
-    ![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%204.png)
-    
+    <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%204.png" width = "4oodp"/>
     - Fast Training / Scalability가 장점
     - 작은 규모의 Corpus에서도 좋은 성능을 보임
 
@@ -169,4 +165,4 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
     - 직관적으로는, superposition을 하면 정보가 소실되는 것 아닌가?
         - high-dimension word vector는 sparse하게 coding되어 있음
         - 그래서 통계적인 방법론을 활용해 re-seperate하는 것이 가능하다고 주장
-        - [0.5, 0.0, 0.5, -1.0, -1.0, 0, 0] -> AVG([1.0, 0, 1.0, 0, 0, 0], [0, 0, 0, -2.0, -2.0, 0, 0]
+        - [0.5, 0.0, 0.5, -1.0, -1.0, 0, 0] >> AVG([1.0, 0, 1.0, 0, 0, 0], [0, 0, 0, -2.0, -2.0, 0, 0]
