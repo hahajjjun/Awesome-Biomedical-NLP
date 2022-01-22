@@ -130,7 +130,42 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 ---
 
 ### Intrinsic/Extrinsic evaluation of word vectors
-
+- Intrinsic
+    - 전체 model의 task중 일부분인 subtask에 대해서 performace measure
+    - 빠르고, 비용이 적게 듦
+    - Real task와의 correlation을 살펴보는 데에는 유용하지 않을 수 있음
+- Extrinsic
+    - 전체 Real task에 대해 evaluate
+    - 각각의 subtask중 어느 부분에서 문제가 있는지, 아니면 subtask system의 interaction에 의한 것인지 등등  예상할 수 없음
+    - 시간이 많이 걸리고, 비용이 많이 듦
+- Example of intrinsic word vector evaluation
+    - Word vector analogy
+        - syntactic / semantic analogy를 평가
+        - analogy task를 잘 수행하면 robust한 embedding이라고 주장
+        - dimensionality, window size 등의 hyperparameter를 변경시키면서 analogy task의 정확도를 비교함
+        - training time, corpus source 등에 따라서도 human knowledge와의 correlation이 달라짐
+    - Human Judgement
+        - Psychological
+        - Human Scoring -> 평균을 구해서 사용
+- Example of extrinsic word vector evaluation
+    - 모든 subsequent task를 수행한 결과에 대한 evaluation
+    - named entity recognition(개체명 인식, NER) : 이름을 가진 개체를 인식
+    - word2vec embedding 이후에 classify하는 과정이 sequentail하게 이루어짐
+      
 ---
 
 ### Word Senses
+- Ambiguity of word sense
+- 대부분의 단어는 여러 의미를 가지고 있음
+- common words
+- one vector만으로 모든 meaning을 capture할 수 있을까?
+- *Huang et al. 2012*, **Improving word representations via global context and multiple word prototypes**
+    - word window 내의 단어들을 클러스터링
+    - 같은 단어도 여러 클러스터에 속할 수 있음
+- *Arora et al. TACL 2018*, **Linear Algebraic Structure of Word Senses, with Applications to Polysemy**
+    - Word2Vec 같은 word embedding을 통해 얻어진 word vector의 superposition으로 최종 word vector를 도출함
+    - 선형 결합의 가중치는 해당 의미로 쓰여진 frequency의 상대적 abundance로 결정
+    - 직관적으로는, superposition을 하면 정보가 소실되는 것 아닌가?
+        - high-dimension word vector는 sparse하게 coding되어 있음
+        - 그래서 통계적인 방법론을 활용해 re-seperate하는 것이 가능하다고 주장
+        - [0.5, 0.0, 0.5, -1.0, -1.0, 0, 0] -> AVG([1.0, 0, 1.0, 0, 0, 0], [0, 0, 0, -2.0, -2.0, 0, 0]
