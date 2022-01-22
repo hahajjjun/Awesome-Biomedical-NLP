@@ -19,10 +19,10 @@
 - 고정된 2D word vector를 분류
 - softmax/logistic classification
     - linear한 decision boundary 때문에 complex task 어려움
-    - MLE approach:
-        - 이미지 1
-    - Cross-Entropy approcah:
-        - 이미지 2
+    - MLE approach: <br/>
+        <img src= "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%203/Fig%201.jpg" width = "500dp"/> <br/>
+    - Cross-Entropy approcah: <br/>
+        <img src= "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%203/Fig%202.jpg" width = "400dp"/> <br/>
         - Cross-Entropy loss & MLE loss are identical
 - Complex한 decision boundary를 위한 Neural Net
     - Nonlinear decision boundary & Learn Complex functions
@@ -40,8 +40,8 @@
 - 층이 많아질수록 복잡한 classification boundary 가능
 - 그러나 Deep layer에서는 Gradient Vanishing, Overfitting 문제도 발생함
     - **ReLU activation function** instead of Sigmoid
-    - **Dropout** to get rid of overfitting
-- 이미지 3
+    - **Dropout** to get rid of overfitting <br/>
+- <img src= "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%203/Fig%203.jpg" width = "700dp"/> <br/>
 
 ---
 
@@ -74,15 +74,15 @@
     - 가장 Naive한 접근은, 특정 단어를 중심으로 한 window 내의 word vector를 평균 내어 average vector를 classsify하는 방법
         - position information loss 발생
     - 다른 접근은, window 내 단어들의 word vector를 일렬로 concat해서 (2m+1) X d 만큼의 길이를 가지는 vector 만들어서 classify하는 것
-        - 이미지 4
+        <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%203/Fig%204.jpg" width = "700dp"/>
 
 ---
 
 ### 3.5. Matrix Calculus
 
 - Jacobian Chain Rule을 활용해 직접 계산
-    - Jacobian Form이 computing하기에는 쉬움 <br/>
-        <img src="latex 1"/>
+    - Jacobian Form이 computing하기에는 쉬움 <br/> <br/>
+        <img src="https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%203/Latex%201.gif" width = "300dp"/> <br/>
         <br/>
     - Gradient와 Parameter의 format이 같기 때문
     - 하지만 Stochastic Gradient Descent를 위해서는 column vector의 형태로 output이 되어야 함 : *Shape convention issue*
