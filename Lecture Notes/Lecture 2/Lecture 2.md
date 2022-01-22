@@ -1,22 +1,23 @@
 # Lecture 2
 
-### Neural Classifiers
+### Word Vectors and Word Senses
 
 ---
 
 ### Overview : 여러 가지 단어 임베딩 모델
 
-| Word2Vec recap |
-| --- |
-| Word2Vec algorithm family |
-| LinAlg based models : counting |
-| GloVe model |
-| Intrinsic/Extrinsic Evaluation of word vectors |
-| Word senses |
+|Index|Subtitle|
+|--- | --- |
+|2.1.| Word2Vec recap |
+|2.2.| Word2Vec algorithm family |
+|2.3.| LinAlg based models : counting |
+|2.4.| GloVe model |
+|2.5.| Intrinsic/Extrinsic Evaluation of word vectors |
+|2.6.| Word senses |
 
 ---
 
-### Word2Vec recap
+### 2.1. Word2Vec recap
 
 - Word Vector는 **랜덤하게 초기화**된 상태
 - 전체 **corpus를 순회**함, sliding window
@@ -26,7 +27,7 @@
 - P(o|c) = softmax(dot(uo, vc))이므로 **matrix notation**으로도 표현 가능
 
 <aside>
-💡 ***Why?***
+💡 Why?
 
 Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유사한 단어끼리 비슷한 위치에 존재하는 이유
 
@@ -43,7 +44,7 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 
 ---
 
-### Word2Vec algorithm family
+### 2.2. Word2Vec algorithm family
 
 - **Word Vector Embedding 개수에 따른 분류**
     - 지금까지 설명한 Word2Vec 모델은 **한 단어당 두 개의 word vector**(center, outside(context))가 임베딩함 ⇒ 최종 word vector 산출 시에는 두 word vector의 평균으로 구하게 됨
@@ -68,7 +69,7 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 
 ---
 
-### LinAlg based models : counting
+### 2.3. LinAlg based models : counting
 
 - ***COALS; Rohde, Gonnerman, & Plaut, 2005***
     - Co-occurence matrix를 구성 ⇒ SVD 같은 LinAlg based calculation 활용
@@ -98,7 +99,7 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 
 ---
 
-### GloVe Model
+### 2.4. GloVe Model
 
 - **지금가지 소개한 모델들 분류해서 정리한 결과**
     
@@ -129,7 +130,7 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 
 ---
 
-### Intrinsic/Extrinsic evaluation of word vectors
+### 2.5. Intrinsic/Extrinsic evaluation of word vectors
 - Intrinsic
     - 전체 model의 task중 일부분인 subtask에 대해서 performace measure
     - 빠르고, 비용이 적게 듦
