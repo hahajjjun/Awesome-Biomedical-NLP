@@ -82,10 +82,7 @@
 
 - Jacobian Chain Rule을 활용해 직접 계산
     - Jacobian Form이 computing하기에는 쉬움 <br/>
-        <img src="https://latex.codecogs.com/gif.latex? {s = u^{T} \cdot h \text{ , }h = f(z) \text { , }  z=Wx+b \text{ , } x= \text{input}"> 
-        <img src="https://latex.codecogs.com/gif.latex? {\partial{s} \over\ \partial{W}} = {\partial{s} \over\ \partial{h}} \cdot {\partial{h} \over\ \partial{z}} \cdot {\partial{z} \over\ \partial{W}}"/> 
-        <img src="https://latex.codecogs.com/gif.latex? {\partial{s} \over\ \partial{W}} = \delta{\partial{z} \over\ \partial{W}} \text{ , }   \delta = {\partial{s} \over\ \partial{h}} \cdot {\partial{h} \over\ \partial{z}} = u^{T} \cdot f'(z)"/> 
-        <img src="https://latex.codecogs.com/gif.latex? \delta \text{ is called local error signal} " />
+        <img src="latex 1"/>
         <br/>
     - Gradient와 Parameter의 format이 같기 때문
     - 하지만 Stochastic Gradient Descent를 위해서는 column vector의 형태로 output이 되어야 함 : *Shape convention issue*
