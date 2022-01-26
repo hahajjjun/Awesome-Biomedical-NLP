@@ -21,8 +21,8 @@
     - 형용사구(AP), 동사구(VP), 전치사구(PP) 등이 어떤 단어를 수식하느냐에 따라 의미가 달라짐 : 중의적인 의미를 가지기도 한다.
     - **"Scientists observe whales from space"**
         - 과학자들이 우주에서 고래를 관측한다.
-        - 과학자들이 우주에서 온 고래를 관측한다.
-    <img src = "..\..\Figures\Lecture 5\Fig 1.jpg" width = "300dp"/> </br>
+        - 과학자들이 우주에서 온 고래를 관측한다. <br/>
+    <img src = "..\..\Figures\Lecture 5\Fig 1.jpg" width = "300dp"/>
 - Coordination Scope Ambiguity
     - 특정 단어가 수식하는 범위가 달라지면 이미가 변하는 경우
     - **"Shuttle veteran and longtime NASA executive Fred Gregory appointed to board"**
@@ -44,17 +44,16 @@
         - NP ⇒ Det (Adj) N PP
         - PP ⇒ Prep(P) NP
         - VP ⇒ V P
-        - 이렇게 주어진 문장을 unit word들의 category로 tagging할 수 있다. </br>
-        <img src = "..\..\Figures\Lecture 5\Fig 2.jpg" width = "300dp"/> </br>
-
+        - 이렇게 주어진 문장을 unit word들의 category로 tagging할 수 있다. <br/>
+        <img src = "..\..\Figures\Lecture 5\Fig 2.jpg" width = "300dp" />
 - Dependency Structure Grammars
     - 한 단어가 다른 단어를 수식하는 관계에 따라 문장을 구조화
     - 수식하는 관계는 품사와 무관함
-    - 수식하는 단어를 'head', 'governor', 수식받는 단어를 'dependent', 'modifier'라고 함
-    <img src = "..\..\Figures\Lecture 5\Fig 3.jpg" width = "300dp"/> </br>
+    - 수식하는 단어를 'head', 'governor', 수식받는 단어를 'dependent', 'modifier'라고 함 <br/>
+    <img src = "..\..\Figures\Lecture 5\Fig 3.jpg" width = "300dp"/>
     
     - Dependency syntax는 문법적 구조가 lexical items 사이의 연관성을 포함하고 있다고 가정하고, 주로 화살표로 dependency를 표현한다.
-    - nmod(noun modifier),  nsubj(noun subject), appos(apposition), aux(auxillary) 등등의 태그로 dependency 관계의 type을 표시할 수도 있다. </br>
+    - nmod(noun modifier),  nsubj(noun subject), appos(apposition), aux(auxillary) 등등의 태그로 dependency 관계의 type을 표시할 수도 있다. <br/>
     - 우선적으로 type를 배제한 경우만 살펴볼 것이다.
 
 ### 5.2. Dependency Grammars and Treebanks
@@ -65,12 +64,12 @@
         - Dependency 관계의 type 역시 함께 표기한다.
         - ROOT에 의해 수식받는 단어(dependent)는 유일해야 한다.
         - 순환 cycle이 생기면 안 된다.
-        - arrow 끼리 교차하는 경우 : extra modifier의 순서를 바꿔서 제거할 수 있다.
-        <img src = "..\..\Figures\Lecture 5\Fig 4.jpg" width = "300dp"/> </br>
+        - arrow 끼리 교차하는 경우 : extra modifier의 순서를 바꿔서 제거할 수 있다. <br/>
+        <img src = "..\..\Figures\Lecture 5\Fig 4.jpg" width = "300dp"/>
     - Tree Dependency structure
         - Sequence를 Tree로 변환할 수 있다.
-        - 가장 상위 노드가 ROOT, 하위 노드가 상위 노드를 항상 수식하는 방향으로 트리를 구성한다.
-        <img src = "..\..\Figures\Lecture 5\Fig 5.PNG" width = "300dp"/> </br>
+        - 가장 상위 노드가 ROOT, 하위 노드가 상위 노드를 항상 수식하는 방향으로 트리를 구성한다. <br/>
+        <img src = "..\..\Figures\Lecture 5\Fig 5.PNG" width = "300dp"/>
 - Dependency parsing에서 주로 관찰되는 특징
     - Bilexical Affinities
         - 두 단어 사이의 친화성(호응)에 따라 plausible한 연결을 탐색
@@ -84,8 +83,8 @@
     - Treebank : corpus annotation
     - 말뭉치(corpus)의 본문에 dependency type별로 annotation을 수행해 놓은 database
     - Reusable
-    - 여러 Language corpus에 대한 annotation
-    <img src = "..\..\Figures\Lecture 5\Fig 6.PNG" width = "600dp"/> </br>
+    - 여러 Language corpus에 대한 annotation <br/>
+    <img src = "..\..\Figures\Lecture 5\Fig 6.PNG" width = "600dp"/> <br/>
 
 ---
 
