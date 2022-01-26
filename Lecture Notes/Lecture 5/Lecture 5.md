@@ -108,20 +108,42 @@
         <img src = "..\..\Figures\Lecture 5\Fig 7.jpg" width = "600dp"/> </br>
         - stack에 저장된 token으로 state를 classify : softmax clsassifier 같은 discriminative classifier 사용
         
-    - State를 ML classifier input으로 제공하기 위한 state embedding 방법론(*Nivre and Hall. 2005*, **MaltParser**)
+    - State를 ML classifier input으로 제공하기 위한 state feature embedding 방법론(*Nivre and Hall. 2005*, **MaltParser**)
         - 토큰 묶음의 형태로 존재하는 state를 embedding하기 위해서 토큰의 feature notation, 특히 토큰의 tag(POS tag)를 참고하기도 함
-        - 토큰 feature를 뽑아내기 위한 notation
-            - 이미지8
-        - 발생할 수 있는 모든 notation들의 조합을 상정하고, 해당 조합이 있으면 1로 임베딩하는 원핫-인코딩 방식(Sparse Encoding)
-            -이미지9
+        - 발생할 수 있는 모든 notation들의 조합을 상정하고, 해당 조합이 있으면 1로 binary embedding 수행하는 방식(Sparse Encoding)
+            - 모든 notation의 조합을 feature template라고 부름
+            - feature template는 대략 1e+6 ~ 1e+7개 정도 존재하며, 1~3개 정도의 요소 조합으로 구성됨
+            - Feature를 binary encoding하여 계산할 때 연산 비용이 많이 필요
+            - POS tag 및 여러 태그의 의미론적 차이 반영 X
+            <img src = "..\..\Figures\Lecture 5\Fig 8.jpg" width = "600dp"/> </br>
+    - Parser 성능평가
+        - 일반적인 Accuracy
+        - UAS(Unlabeled Attachment Score) : Dependency 관계의 정답 여부만 확인, 관계의 종류는 무시
+        - LAS(Labeled Attachment Score) ; Dependency 관계 + classification까지 정확해야 정답으로 인정
+        <img src = "..\..\Figures\Lecture 5\Fig 9.jpg" width = "600dp"/> </br>
         
 ---
 
 ### 5.4. Neural Dependency Parsing
 - Neural Network가 적용된 Dependency Parsing 방법론
+- 왜 Neural Dependency Parsing : Transition based 방법론의 문제점
+    - Feature Embedding 수행해도 굉장히 sparse
+    - 불완전한 Feature Embedding
+    - Embedded Feature를 활용한 계산 비용이 많이 드는 문제(Parsing time의 95%를 차지)
+- Transitional, Graph-Based, Neural Parsing model 성능비교
+    |Parser|UAS|LAS|sentence/sec|-|
+    |-|-|-|-|-|
+    |MaltParser|89.8|87.2|469|Transitoinal|
+    |MSTParser|91.4|88.1|*10*|Graph-Based|
+    |TurboParser|**92.3**|89.6|*8*|Graph-Based|
+    |Chen and Manning, 2014|92.0|**89.6**|**654**|Neural|
 - Input layer : Input state representation
-    - 
+    <img src = "..\..\Figures\Lecture 5\Fig 10.jpg" width = "600dp"/> </br>
 - Hidden layer : Cube activation function(ReLU, LeakyReLU, Sigmoid, Tanh ...)
 - Output layer : Softmax를 통해 Decision-making
-- 성능비교
+- Structure
+<img src = "..\..\Figures\Lecture 5\Fig 11.jpg" width = "600dp"/> </br>
+- MaltParser(Nivre et al.)에서의 sparse representation를 dense representation으로 보완
+    - accuracy, speed 측면에서도 모두 outperforming
+    - bigger, deeper model + hyperparemter tuning을 통해서 계속해서 성능 개선이 이루어짐(Weiss et al.(2015), Andor et al.(2016))
         
