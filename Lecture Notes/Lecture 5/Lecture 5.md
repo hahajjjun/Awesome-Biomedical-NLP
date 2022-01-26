@@ -22,7 +22,7 @@
     - **"Scientists observe whales from space"**
         - 과학자들이 우주에서 고래를 관측한다.
         - 과학자들이 우주에서 온 고래를 관측한다. <br/>
-    <img src = "..\..\Figures\Lecture 5\Fig 1.jpg" width = "300dp"/>
+        <img src = "..\..\Figures\Lecture 5\Fig 1.jpg" width = "300dp"/> <br/>
 - Coordination Scope Ambiguity
     - 특정 단어가 수식하는 범위가 달라지면 이미가 변하는 경우
     - **"Shuttle veteran and longtime NASA executive Fred Gregory appointed to board"**
@@ -45,12 +45,12 @@
         - PP ⇒ Prep(P) NP
         - VP ⇒ V P
         - 이렇게 주어진 문장을 unit word들의 category로 tagging할 수 있다. <br/>
-        <img src = "..\..\Figures\Lecture 5\Fig 2.jpg" width = "300dp" />
+            <img src = "..\..\Figures\Lecture 5\Fig 2.jpg" width = "300dp" />
 - Dependency Structure Grammars
     - 한 단어가 다른 단어를 수식하는 관계에 따라 문장을 구조화
     - 수식하는 관계는 품사와 무관함
     - 수식하는 단어를 'head', 'governor', 수식받는 단어를 'dependent', 'modifier'라고 함 <br/>
-    <img src = "..\..\Figures\Lecture 5\Fig 3.jpg" width = "300dp"/>
+        <img src = "..\..\Figures\Lecture 5\Fig 3.jpg" width = "300dp"/>
     
     - Dependency syntax는 문법적 구조가 lexical items 사이의 연관성을 포함하고 있다고 가정하고, 주로 화살표로 dependency를 표현한다.
     - nmod(noun modifier),  nsubj(noun subject), appos(apposition), aux(auxillary) 등등의 태그로 dependency 관계의 type을 표시할 수도 있다. <br/>
@@ -69,7 +69,7 @@
     - Tree Dependency structure
         - Sequence를 Tree로 변환할 수 있다.
         - 가장 상위 노드가 ROOT, 하위 노드가 상위 노드를 항상 수식하는 방향으로 트리를 구성한다. <br/>
-        <img src = "..\..\Figures\Lecture 5\Fig 5.PNG" width = "300dp"/>
+            <img src = "..\..\Figures\Lecture 5\Fig 5.PNG" width = "300dp"/>
 - Dependency parsing에서 주로 관찰되는 특징
     - Bilexical Affinities
         - 두 단어 사이의 친화성(호응)에 따라 plausible한 연결을 탐색
@@ -84,7 +84,7 @@
     - 말뭉치(corpus)의 본문에 dependency type별로 annotation을 수행해 놓은 database
     - Reusable
     - 여러 Language corpus에 대한 annotation <br/>
-    <img src = "..\..\Figures\Lecture 5\Fig 6.PNG" width = "600dp"/> <br/>
+        <img src = "..\..\Figures\Lecture 5\Fig 6.PNG" width = "600dp"/> <br/>
 
 ---
 
@@ -114,12 +114,12 @@
             - feature template는 대략 1e+6 ~ 1e+7개 정도 존재하며, 1~3개 정도의 요소 조합으로 구성됨
             - Feature를 binary encoding하여 계산할 때 연산 비용이 많이 필요
             - POS tag 및 여러 태그의 의미론적 차이 반영 X
-            <img src = "..\..\Figures\Lecture 5\Fig 8.jpg" width = "600dp"/> </br>
+                <img src = "..\..\Figures\Lecture 5\Fig 8.jpg" width = "600dp"/> </br>
     - Parser 성능평가
         - 일반적인 Accuracy
         - UAS(Unlabeled Attachment Score) : Dependency 관계의 정답 여부만 확인, 관계의 종류는 무시
         - LAS(Labeled Attachment Score) ; Dependency 관계 + classification까지 정확해야 정답으로 인정
-        <img src = "..\..\Figures\Lecture 5\Fig 9.jpg" width = "600dp"/> </br>
+            <img src = "..\..\Figures\Lecture 5\Fig 9.jpg" width = "600dp"/> </br>
         
 ---
 
@@ -136,12 +136,12 @@
     |MSTParser|91.4|88.1|*10*|Graph-Based|
     |TurboParser|**92.3**|89.6|*8*|Graph-Based|
     |Chen and Manning, 2014|92.0|**89.6**|**654**|Neural|
-- Input layer : Input state representation
-    <img src = "..\..\Figures\Lecture 5\Fig 10.jpg" width = "600dp"/> </br>
+- Input layer : Input state representation <br/>
+    <img src = "..\..\Figures\Lecture 5\Fig 10.jpg" width = "600dp"/> <br/>
 - Hidden layer : Cube activation function(ReLU, LeakyReLU, Sigmoid, Tanh ...)
 - Output layer : Softmax를 통해 Decision-making
-- Structure
-<img src = "..\..\Figures\Lecture 5\Fig 11.jpg" width = "600dp"/> </br>
+- Structure <br/>
+<img src = "..\..\Figures\Lecture 5\Fig 11.jpg" width = "600dp"/> <br/>
 - MaltParser(Nivre et al.)에서의 sparse representation를 dense representation으로 보완
     - accuracy, speed 측면에서도 모두 outperforming
     - bigger, deeper model + hyperparemter tuning을 통해서 계속해서 성능 개선이 이루어짐(Weiss et al.(2015), Andor et al.(2016))
