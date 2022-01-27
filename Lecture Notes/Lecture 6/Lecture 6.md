@@ -17,7 +17,7 @@
 ---
 ### 6.1. Language Modeling(LM)
 - **어떤 단어가 빈칸에 등장할지** 예측하는 Task
-- *the students opened their* ____ 
+- *the students opened their* ____ <br/>
     <img src = "..\..\Figures\Lecture 6\eq 1.svg" width = "200dp" /> <br/>
 - LM은 각 term에 해당하는 조건부 확률을 도출하므로, 이를 곱하면 특정한 텍스트 x(1), ..., x(t)가 등장할 확률 역시 구할 수 있다.
 - 자동완성에도 활용
@@ -32,24 +32,34 @@
         <img src = "..\..\Figures\Lecture 6\eq 2.svg" width = "600dp" /> <br/><br/>
     - n-gram, (n-1)-gram probability는 large corpus에서 등장하는 빈도를 세어서 구할 수 있다.
     <br/>
+    
     >***Application : "the students opened their ____"***
+    
     - 이 예시에서 ____에 들어갈 단어를 찾으려면 아래 값을 구해야 한다.
     <img src = "..\..\Figures\Lecture 6\eq 3.svg" width = "600dp" /> <br/>
+    
     > **Sparsity problem 1**
+    
     - 분자가 0인 경우(train corpus에 이러한 target이 없을 경우)
         - Prob = 0
         - Smoothing : Vocab 속의 모든 단어에 작은 값을 더해준다.
         <br/>
+        
     > **Sparsity problem 2**
+    
     - 분모가 0인 경우(train corpus에 이러한 feature가 없을 경우)
         - train 과정에서 학습하지 않은 조합을 예측할 때 발생하는 문제
         - Backoff : n-gram의 count가 없을 경우, 마지막 단어를 제외하고 (n-1) gram의 count로 대체하는 방법
         <br/>
+        
     > **Storage problem**
+    
     - 큰 n에서는, sparsity problem이 더욱 심화되고 모델이 지나치게 커진다.
     - 일반적으로는 n이 5보다 작아야 한다.
     <br/>
+    
     > **Incoherence problem**
+    
     - 하지만 작은 n에서는, 앞선 문맥을 반영하기 어렵다.
     <br/>
 - Text Generation
@@ -63,18 +73,24 @@
 ### 6.3. Neural Language Model
 
 - 단어들의 sequence를 input으로 전달하면 다음 단어에 대한 probability distribution을 도출하는 NN
+
 > **Structure**
+
 - NER(Named Entity Recognition) Recap :
     - 특정 window 내의 단어를 벡터로 임베딩하고, 간단한 Neural Net 통과하면 분류됨
 - 마찬가지로 window-based Neural Model 적용하면 단어를 임베딩해서 input으로 전달하면, softmax를 거쳐 확률분포를 도출함
 <img src = '../../Figures/Lecture 6/Fig 1.jpg' width = "300dp">
+
 > **장단점**
+
 - n-gram LM의 sparsity 문제를 해결할 수 있고, 모든 n-gram에 대한 관측을 저장할 필요가 없음
 - word embedding, weight matrix의 부분행렬끼리 sharing이 없음 : 비효율적인 학습
 <img src = '../../Figures/Lecture 6/Fig 2.jpg' width = "350dp">
 - 그러나 고정된 window(예를 들어 4개 단어)의 크기가 너무 작고, window가 커지면 모델 크기와 Weight matrix W가 함께 커짐
 - 어떤 input length라도 모델의 구조 변화 없이 처리할 수 있는 Network Architecture가 필요함 : *RNN*
+
 ---
+
 ### 6.4. RNNs
 
 > **Architecture**
@@ -110,9 +126,9 @@
     - SGD를 활용해 mini-batch 단위로 gradient descent을 수행할 수도 있음
 
 > **Backpropagation**
-- Backpropagation Recap(Lec 4)
+- Backpropagation Recap(Lec 4) <br/>
     <img src = "../../Figures/Lecture 6/Fig 6.jpg" width = "400dp"> <br/>
-- Backpropagation Through Time(BPTT)
+- Backpropagation Through Time(BPTT) <br/>
 <img src = "../../Figures/Lecture 6/Fig 7.jpg" width = "600dp"> <br/>
 > **Text Generation**
 
