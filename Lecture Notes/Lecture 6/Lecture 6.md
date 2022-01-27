@@ -49,7 +49,7 @@
     - 큰 n에서는, sparsity problem이 더욱 심화되고 모델이 지나치게 커진다.
     - 일반적으로는 n이 5보다 작아야 한다.
     <br/>
-    > **Incoherenc problem**
+    > **Incoherence problem**
     - 하지만 작은 n에서는, 앞선 문맥을 반영하기 어렵다.
     <br/>
 - Text Generation
