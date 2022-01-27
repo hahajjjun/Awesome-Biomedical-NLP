@@ -5,9 +5,9 @@
 |Introductions & Word Vectors|[Lecture 1](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%201/Lecture%201.md)|[Word2Vec](https://arxiv.org/abs/1301.3781)|
 |Word Vectors & Word Senses|[Lecture 2](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%202/Lecture%202.md)|[GloVe](https://aclanthology.org/D14-1162.pdf)|
 |Neural Networks|[Lecture 3](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%203/Lecture%203.md)||
-|Backpropagation|[Lecture 4]||
+|Backpropagation|Lecture 4||
 |Dependency Parsing|[Lecture 5](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%205/Lecture%205.md)||
-|Language Models & RNNs|Lecture 6||
+|Language Models & RNNs|[Lecture 6](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%205/Lecture%206.md)||
 |Vanishing Gradients & Fancy RNNs|Lecture 7||
 |Translation & Seq2Seq & Attention|Lecture 8||
 |Practical Tips|Lecture 9||
