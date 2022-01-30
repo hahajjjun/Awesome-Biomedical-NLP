@@ -9,7 +9,7 @@
 |Dependency Parsing|[Lecture 5](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%205/Lecture%205.md)||
 |Language Models & RNNs|[Lecture 6](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%206/Lecture%206.md)||
 |Vanishing Gradients & Fancy RNNs|[Lecture 7](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%207/Lecture%207.md)||
-|Translation & Seq2Seq & Attention|Lecture 8||
+|Translation & Seq2Seq & Attention|[Lecture 8](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%208/Lecture%208.md)||
 |Practical Tips|Lecture 9||
 |Q&A|Lecture 10||
 |Convolutional Networks for NLP|Lecture 11||
