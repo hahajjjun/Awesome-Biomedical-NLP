@@ -98,11 +98,11 @@
     - **Alexis Conneau (2017)** : *Very Deep Convolutional Networks for Text Classification*
     - 일반적으로 NLP에서 CNN을 사용하더라도 신경망이 매우 깊지 않음
     - 하지만 VGGNet, ResNet처럼 깊게 층을 쌓은 것이 VD-CNN이다.
-    - BatchNorm & ReLU activation
-    <img src = "../../Figures/Lecture 11/Fig 9.jpg" width = "200dp">
-    <img src = "../../Figures/Lecture 11/Fig 10.jpg" width = "200dp">
-    - 대체로 29 Layer 이상 깊게 쌓았을 때 좋은 성능을 보임
-    <img src = "../../Figures/Lecture 11/Fig 11.jpg" width = "500dp">
+    - BatchNorm & ReLU activation <br/>
+    <img src = "../../Figures/Lecture 11/Fig 9.JPG" width = "200dp"> <br/>
+    <img src = "../../Figures/Lecture 11/Fig 10.JPG" width = "200dp"> <br/>
+    - 대체로 29 Layer 이상 깊게 쌓았을 때 좋은 성능을 보임 <br/>
+    <img src = "../../Figures/Lecture 11/Fig 11.JPG" width = "500dp"> <br/>
 
 ---
 
@@ -110,7 +110,7 @@
 
 - RNN은 Deep NLP를 위한 standard한 building blcok이지만, parallelize하기 어렵고 굉장히 느리다.
 - 그래서 CNN과 RNN의 장점을 조합한 Quasi-recurrent Neural Network 제안
-- [Q-RNN](https://arxiv.org/abs/1611.01576)
-    <img src = "../../Figures/Lecture 11/Fig 12.jpg" width = "500dp"> <br/>
+- [Q-RNN](https://arxiv.org/abs/1611.01576) <br/>
+    <img src = "../../Figures/Lecture 11/Fig 12.JPG" width = "500dp"> <br/>
     - QRNN의 경우 Convolution을 수행한 다음 CNN에서 Max-Pooling을 주로 수행하는 것고 달리 hidden state를 만들어 previous hidden state가 current hidden state에 영향을 미치게 됨
      
