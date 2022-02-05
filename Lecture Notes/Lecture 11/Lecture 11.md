@@ -28,9 +28,9 @@
     - 1D convolution을 통해 특정 k-gram의 정보를 capture하는 방법론을 도입한다.
 
 - CNN에서 중요한 개념들 : **Convolution, Padding, Strdie, Dilation, Pooling** <br/>
-    <img src = "../../Figures/Lecture 11/Fig 1.jpg" width = "400dp"><br/>
-    <img src = "../../Figures/Lecture 11/Fig 2.jpg" width = "1000dp"><br/>
-    <img src = "../../Figures/Lecture 11/Fig 3.jpg" width = "300dp"><br/>
+    <img src = "../../Figures/Lecture 11/Fig 1.jpg" width = "400dp"><br/><br/>
+    <img src = "../../Figures/Lecture 11/Fig 2.jpg" width = "1000dp"><br/><br/>
+    <img src = "../../Figures/Lecture 11/Fig 3.jpg" width = "300dp"><br/><br/>
     <img src = "../../Figures/Lecture 11/Fig 4.jpg" width = "500dp">
 
 ---
@@ -42,9 +42,9 @@
      - Word2Vec, Glove 등으로 pre-train된 워드 임베딩 사용
      - Pretrained word vector로 초기화한 벡터를 두 개 복제하여 fine tuning한 것(static), 하지 않은 것(non-static) 둘 다 사용
      - ReLU activation function
-     - 마지막 Softmax layer에서 Dropout(p=0.5), L2 norm constraint(||W||=3) 등의 regularization 기법 사용 <br/>
-     <img src = "../../Figures/Lecture 11/Fig 6.jpg" width = "700dp"><br/>
-     <img src = "../../Figures/Lecture 11/Fig 7.jpg" width = "300dp">
+     - 마지막 Softmax layer에서 Dropout(p=0.5), L2 norm constraint(||W||=3) 등의 regularization 기법 사용 <br/><br/>
+        <img src = "../../Figures/Lecture 11/Fig 6.jpg" width = "700dp"><br/>
+        <img src = "../../Figures/Lecture 11/Fig 7.jpg" width = "300dp">
 
 - Kim's work & 다른 classification model 비교
     - Regularization & Dropout 등의 방법론적 차이 존재로 성능 비교 문제점 지적
