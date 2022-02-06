@@ -62,7 +62,9 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
         - Naive Softmax 개선 ⇒ Loss function에 logistic term 추가
         - **아이디어 : 좋은 모델이라면 true pair(c,o)와 random noise(c,o)를 구분할 수 있어야 한다!**
             
-            <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80.png" width = "500dp"/>
+<p align = "center">
+<img src = "../../Figures/Lecture02/Fig 1.png" width = "600dp"/>
+</p>
             
 
 ---
@@ -83,17 +85,19 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
         - Co-occurence matrix 전체를 사용할 수도 있음 : But very high dimensional & Sparse
             - less robust model & sparsity issue
             - **SVD 통한 차원 축소**
-                
-                <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%201.png" width = "400dp"/>
-                
-    - Co-occurence matrix X를 구성할 때 사용한 Hacks
-        - Raw count에 대해서 SVD를 수행하면 사실 성능이 좋지 않음
-        - Scaling the counts
-            - 빈도가 너무 높은 function words제외
-            - 빈도 = max(X,100)으로 threshold하기
-            - log(빈도)로 계산
-        - 단순히 count 쓰기보다 Pearson correlation 사용해 가중치를 다르게(negative vals ⇒ 0)
-        - 중심에서 가깝게 나타날수록 더 높은 가중치 : Ramped Windows(🔺)
+
+<p align = "center">
+<img src = "../../Figures/Lecture02/Fig 2.png" width = "400dp"/>
+</p>
+
+- Co-occurence matrix X를 구성할 때 사용한 Hacks
+    - Raw count에 대해서 SVD를 수행하면 사실 성능이 좋지 않음
+    - Scaling the counts
+        - 빈도가 너무 높은 function words제외
+        - 빈도 = max(X,100)으로 threshold하기
+        - log(빈도)로 계산
+    - 단순히 count 쓰기보다 Pearson correlation 사용해 가중치를 다르게(negative vals ⇒ 0)
+    - 중심에서 가깝게 나타날수록 더 높은 가중치 : Ramped Windows(🔺)
 
 ---
 
@@ -113,14 +117,21 @@ Word Vector Embedding 결과를 2D, 3D Projection해서 clustering했을 때 유
 - ***Encoding meaning components in vector differences [Pennington et al, EMNLP 2014]***
     - Co-occurence probability의 비율이 의미적 유사성을 인코딩할 것이라고 추론함
         
-        <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%202.png" width = "500dp"/>
+<p align = "center">
+<img src = "../../Figures/Lecture02/Fig 3.png" width = "400dp"/>
+</p>
+
+- Counting 통해서 embedding vector 게산하거나 유추 가능
         
-    - Counting 통해서 embedding vector 게산하거나 유추 가능
-        
-        <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%203.png" width = "400dp"/>
+<p align = "center">
+<img src = "../../Figures/Lecture02/Fig 4.png" width = "300dp"/>
+</p>
         
 - ***GloVe [Pennington et al, EMNLP 2014]***
-    <img src = "https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%202/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%204.png" width = "4oodp"/>
+    <p align = "center">
+    <img src = "../../Figures/Lecture02/Fig 5.png" width = "400dp"/>
+    </p>
+
     - Fast Training / Scalability가 장점
     - 작은 규모의 Corpus에서도 좋은 성능을 보임
 
