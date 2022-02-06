@@ -1,7 +1,5 @@
 # NLP_Review
 
-The goal of this repository is to save roadmap to Genome-NLP.
-There are some NLP-fashioned models such as GeneBERT, DNABERT to discover motif or regulatory regions from various sequences.
 ## Genome-NLP Papers
 |Title|
 |---|
