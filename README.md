@@ -34,7 +34,7 @@
 |BERT & Other Pre-trained Language Models|Lecture 22||
 
 ## Prerequisite 2. Fundamental NLP Papers
-- Universal Language Model Fine-tuning for Text Classification
-- Deep contextualized word representations
-- Attention is All You Need
+- ULMFiT : Universal Language Model Fine-tuning for Text Classification
+- ELMo : Deep contextualized word representations
+- Transformer : Attention is All You Need
 - BERT: Pre-training of Deep bidirectional Transformers for Language Understanding
