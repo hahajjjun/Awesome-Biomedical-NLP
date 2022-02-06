@@ -67,9 +67,13 @@
     - observation-expectation의 차이만큼 gradient가 나타나고, learning rate를 곱한 것만큼 parameter update가 일어남
 </aside>
 
-![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%201/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80.png)
+<p align = "center">
+<img src = "../../Figures/Lecture01/Fig 1.png" width = 400dp>
+</p>
 
-![PNG 이미지.png](https://github.com/hahajjjun/NLP_Review/blob/main/Figures/Lecture%201/PNG_%EC%9D%B4%EB%AF%B8%EC%A7%80%201.png)
+<p align = "center">
+<img src = "../../Figures/Lecture01/Fig 2.png" width = 500dp>
+</p>
 
 **Analogy Task with Word2Vec**
 
