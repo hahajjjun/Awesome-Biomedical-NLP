@@ -22,10 +22,10 @@
 |Question Answering |[Lecture 10](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%2010/Lecture%2010.md)|SQuAD BiDAF DCN FusionNet|
 |Convolutional Networks for NLP|[Lecture 11](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%2011/Lecture%2011.md)||
 |Subword Models|Lecture 12||
-|Contextual Word Embeddings|Lecture 13||
+|Contextual Word Embeddings|[Lecture 13](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%2013/Lecture%2013.md)||
 |Transformers & Self-Attention|Lecture 14||
 |Natural Language Generation|Lecture 15||
-|Coreference Resolution|Lecture 16||
+|Coreference Resolution|[Lecture 16](https://github.com/hahajjjun/NLP_Review/blob/main/Lecture%20Notes/Lecture%2016/Lecture%2016.md)||
 |Multitask Learning|Lecture 17||
 |Constituency Parsing & TreeRNN|Lecture 18||
 |Bias in AI|Lecture 19||
