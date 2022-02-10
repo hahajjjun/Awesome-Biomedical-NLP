@@ -62,12 +62,12 @@
 - 개념적으로 Word2Vec이나 GloVe 등의 임베딩 방법론으로는 Contextual Word Embedding이 불가능합니다. 그래서 Language Model을 임베딩에 활용한 아이디어가 TagLM에서 제시되었습니다.
 - TagLM은 pretrain된 Bilinear Language Model을 활용해 Sequence Tagging Module의 임베딩 과정에서 추가 임베딩을 수행하게 됩니다.
 - 전체 모델의 학습은 Semi-Supervised fashion으로 이루어지게 됩니다.
-<p align = "center"><img src = "../../Figures/Lecture13/Fig 2.JPG" width = "600dp"></p>
+<p align = "center"><img src = "../../Figures/Lecture13/Fig 2.jpg" width = "600dp"></p>
 
 - Bi-LM의 경우에는 고정된 임베딩을 제공하고, Backpropagation 과정에서 gradient flow가 일어나지 않도록 고정하는 것이 특징입니다.
 - Bilinear LM은 Bi-LSTM과 개념적으로 다른 것입니다! *Bi-LSTM은 순방향 LSTM과 역방향 LSTM의 은닉 상태를 concatenate하여 최종적으로 산출한 결과를 다음 층의 입력으로 사용하지만, Bi-LM은 순방향 언어모델과 역방향 언어모델의 별개 언어모델을 학습하는 개념입니다.*
 - 여기서 Language Moodel이 single layer라면 Bi-LSTM에서 단순하게 concat하는 것과 결과가 동일하겠지만, 뒤에 설명할 ELMo의 경우 Bi-LM이 두 층으로 구성되어 있고, 각각의 LM을 활용해 임베딩 벡터를 얻는 과정은 Bi-LSTM의 simple concatenation과는 다릅니다.
-<p align = "center"><img src = "../../Figures/Lecture13/Fig 3.JPG" width = "450dp"></p>
+<p align = "center"><img src = "../../Figures/Lecture13/Fig 3.jpg" width = "450dp"></p>
 
 > **ELMo, Embeddings from Language Model**
 
@@ -80,7 +80,7 @@
 - ELMo에서 제안한 여러 층으로 구성된 Bi-LM으로부터 임베딩을 얻는 과정은 다음과 같고, 이러한 임베딩을 ELMo Embedding이라고 부릅니다.
 - ELMo 임베딩은 Contextual한 관점에서 단어의 의미를 Capture할 수 있다는 장점이 있어, 기존 Baseline 모델에 ELMo 임베딩을 추가했을 때에도 성능 향상이 이루어지는 것이 보고되었습니다.
 
-<p align = "center"><img src = "../../Figures/Lecture13/Fig 4.JPG" width = "450dp"></p>
+<p align = "center"><img src = "../../Figures/Lecture13/Fig 4.jpg" width = "450dp"></p>
 
 - ELMo 임베딩을 수행하는 Bi-LM은 두 개의 레이어로 구성되어 있다고 언급했는데, 그 중에서 Lower Layer와 Higher Layer가 capture하는 정보가 달랐습니다.
 - Lower Layer는 lower-level syntax, 예를 들어 POS tagging, Syntactic depedencies, NER 등을 잘 capture했습니다.
@@ -96,7 +96,7 @@
     - 그리고 Bi-LM 모듈의 마지막 레이어만 classification layer로 바꾸고, 원래 LM의 마지막 레이어의 파라미터는 Freeze합니다.
     - LM fine-tuning 과정에서는 여러 디테일한 Learning Rate 조절 기법들이 활용되었습니다.(STLR, 층마다 다른 LR 적용..)
 
-<p align = "center"><img src = "../../Figures/Lecture13/Fig 5.JPG" width = "600dp"></p>
+<p align = "center"><img src = "../../Figures/Lecture13/Fig 5.jpg" width = "600dp"></p>
 
 - ULMfit 이후로 모델들은 주로 Scale-UP의 형태로 발전해 왔습니다.
 - OpenAI의 GPT는 1 GPU day의 ULMfit보다 240배 더 긴 시간동안 Train했고, BERT 역시 그러합니다. 최근에는 더욱 큰 모델이 더욱 좋은 성능을 내고 있음이 보고되고 있습니다. 
@@ -121,9 +121,9 @@
 - Skip Connection 등의 기법이 적용되었습니다.
 - FFNN : Position-wise Feed forward neural network를 사용합니다.(Position마다 각각 독립적인 FFNN이 사용됩니다)
 
-<p align = "center"><img src = "../../Figures/Lecture13/Fig 6.JPG" width = "900dp"></p>
+<p align = "center"><img src = "../../Figures/Lecture13/Fig 6.jpg" width = "900dp"></p>
 
-<p align = "center"><img src = "../../Figures/Lecture13/Fig 7.JPG" width = "900dp"></p>
+<p align = "center"><img src = "../../Figures/Lecture13/Fig 7.jpg" width = "900dp"></p>
 
 ---
 
