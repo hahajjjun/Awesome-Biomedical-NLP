@@ -1,12 +1,5 @@
 # NLP_Review
 
-## Genome-NLP Papers
-|Title|
-|---|
-|[Genomics and natural language processing](https://www.nature.com/articles/nrg861)|
-|[GeneBERT](https://github.com/ZovcIfzm/GeneBERT)|
-|[DNABERT](https://github.com/jerryji1993/DNABERT)|
-
 ## Prerequisite 1. CS224n Winter 2019(KR)
 |Title|Summary|Related Papers|
 |------|---|---|
