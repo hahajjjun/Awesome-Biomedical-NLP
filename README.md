@@ -1,4 +1,4 @@
-# NLP_Review
+# Awesome Biomedical NLP
 
 ## Prerequisite 1. CS224n Winter 2019(KR)
 |Title|Summary|Related Papers|
